@@ -21,8 +21,7 @@ class wp_accedeme_activator {
         }
     
         $website = $helpers->accedemeGetWebsite();
-    
-        if ( !isset( $website ) ) {
+        if ( !sizeof( $website ) ) {
             $website = $helpers->accedemeGetRemoteWebsiteKey();
             if ( $website ) {
                 $helpers->accedemeInsert( $website );

@@ -68,11 +68,11 @@ class wp_accedeme_helpers
     
     public function accedemeGetRemoteWebsiteKey() {
         global $wp_version;
+
         $website = array();
+
         $apiUrl = 'https://accedeme.com/plugins/wordpress_get_domain_key';
-    
-        		
-        $array_with_parameters = array(
+        $apiParameters = array(
             'domain' => $_SERVER['HTTP_HOST'],
             'version' => $wp_version,
         );
@@ -81,21 +81,23 @@ class wp_accedeme_helpers
             'headers' => array(
                 'Content-Type' => 'application/json',
             ),
-            'body'        => json_encode($array_with_parameters),
+            'body'        => json_encode($apiParameters),
             'method'      => 'POST',
-            'data_format' => 'body',
+            //'data_format' => 'body',
+			'timeout'     => 45,
+			'sslverify'   => false,
         );
-    
+
         $response = wp_remote_post( $apiUrl, $args );
         $response_code = wp_remote_retrieve_response_message( $response );
     
         if ( $response_code === 'OK' ) {
             $response_body = json_decode( wp_remote_retrieve_body( $response ), true );
     
-            if ( isset( $response_body['domain_key'] ) ) 
+            if ( $response_body['status'] == 'ok' ) 
             {
                 $website = [
-                    'domain_key' => $response_body['domain_key'],
+                    'domain_key' => $response_body['data']['domain_key'],
                 ];
             }
         }
