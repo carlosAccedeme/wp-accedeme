@@ -1,20 +1,18 @@
 <?php
 
 /**
- * Adds our one line of code to the footer.
+ * Admin main page.
  *
- * This class defines all code necessary to run the Accedeme widget.
+ * This class defines all code necessary to display admin's main page.
  *
  * @package    wp_accedeme
- * @subpackage wp_accedeme/includes
+ * @subpackage wp_accedeme/admin
  * @author     Accedeme
  */
 class wp_accedeme_admin
 {
-	/**
-     * Constructor
-     */
-    public function __construct() {
+    public function __construct()
+    {
         add_action('admin_menu', array( $this, 'accedeme_admin_menu_script' ) );
     }
 

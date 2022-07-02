@@ -19,6 +19,10 @@ register_activation_hook( __FILE__, array( 'wp_accedeme_activator', 'activate' )
 require_once ACCEDEME_DIR . 'includes/wp-accedeme-deactivator.php';
 register_deactivation_hook( __FILE__, array( 'wp_accedeme_deactivator', 'deactivate' ) );
 
+require_once ACCEDEME_DIR . 'includes/wp-accedeme-uninstall.php';
+register_uninstall_hook( __FILE__, array( 'wp_accedeme_uninstall', 'uninstall' ) );
+
+
 require_once ACCEDEME_DIR . 'includes/wp-accedeme-footer.php';
 $footer = new wp_accedeme_footer();
 

@@ -11,20 +11,6 @@
  */
 class wp_accedeme_activator {
 
-    /**
-     * The database version number. Update this every time you make a change to the database structure.
-     *
-     * @access   protected
-     * @var      string    $db_version   The database version number
-     */
-
-    /**
-     * Code that is run at plugin activation. Notice: This code does NOT run when plugin
-     * is updated automatically (or via version control updates)
-     *
-     * Creates the initial database structure required by the plugin and does other
-     * data initialization. For updates, @see Wp_accedeme->update_plugin_data().
-	 */
 	public static function activate()
 	{
 		require_once ACCEDEME_DIR . 'includes/wp-accedeme-helpers.php';
@@ -36,7 +22,7 @@ class wp_accedeme_activator {
     
         $website = $helpers->accedemeGetWebsite();
     
-        if ( ! isset( $website ) ) {
+        if ( !isset( $website ) ) {
             $website = $helpers->accedemeGetRemoteWebsiteKey();
             if ( $website ) {
                 $helpers->accedemeInsert( $website );

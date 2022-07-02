@@ -11,15 +11,13 @@
  */
 class wp_accedeme_deactivator {
 
-	/**
-	 * Does deactivation actions.
-	 */
 	public static function deactivate()
 	{
 		require_once ACCEDEME_DIR . 'includes/wp-accedeme-helpers.php';
 		$helpers = new wp_accedeme_helpers();
 
-		$helpers->accedemeRemoveTable();
+        if ( $helpers->accedemeIsTableExist() ) {
+		    $helpers->accedemeRemoveTable();
+        }
 	}
-
 }
