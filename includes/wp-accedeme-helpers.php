@@ -30,7 +30,7 @@ class wp_accedeme_helpers
         ) $charset_collate
         ";
     
-        if ( ! function_exists( 'dbDelta' ) ) {
+        if ( !function_exists( 'dbDelta' ) ) {
             require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         }
     
@@ -83,8 +83,7 @@ class wp_accedeme_helpers
             ),
             'body'        => json_encode($apiParameters),
             'method'      => 'POST',
-            //'data_format' => 'body',
-			'timeout'     => 45,
+			'timeout'     => 15,
 			'sslverify'   => false,
         );
 
