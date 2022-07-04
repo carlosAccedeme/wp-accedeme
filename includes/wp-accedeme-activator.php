@@ -19,16 +19,12 @@ class wp_accedeme_activator {
         if ( !$helpers->accedemeIsTableExist() ) {
             $helpers->accedemeInitTable();
         }
-    
-        $website = $helpers->accedemeGetWebsite();
-        if ( !sizeof( $website ) ) {
-            $website = $helpers->accedemeGetRemoteWebsiteKey();
-            if ( $website ) {
-                $helpers->accedemeInsert( $website );
-            }
+
+        if ( $website_key = $helpers->accedemeGetWebsiteKey() ) {
+			$helpers->accedemeInsert( $website_key );
         }
 
-		if ( is_wp_error( $website ) ) {
+		if ( is_wp_error( $website_key ) ) {
 			return false;
 		}
 		return true;

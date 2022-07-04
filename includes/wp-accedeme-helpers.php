@@ -19,7 +19,7 @@ class wp_accedeme_helpers
 
 	public function accedemeInitTable() {
         global $wpdb;
-        $table_name      = $wpdb->prefix . 'accedeme';
+        $table_name      = $wpdb->prefix . ACCEDEME_TABLE_NAME;
         $charset_collate = $wpdb->get_charset_collate();
     
         $sql = "
@@ -30,7 +30,7 @@ class wp_accedeme_helpers
         ) $charset_collate
         ";
     
-        if ( !function_exists( 'dbDelta' ) ) {
+        if ( ! function_exists( 'dbDelta' ) ) {
             require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         }
     
@@ -39,7 +39,7 @@ class wp_accedeme_helpers
     
     public function accedemeRemoveTable() {
         global $wpdb;
-        $table_name = $wpdb->prefix . 'accedeme';
+        $table_name = $wpdb->prefix . ACCEDEME_TABLE_NAME;
     
         $sql = "DROP TABLE IF EXISTS `$table_name`";
     
@@ -48,7 +48,8 @@ class wp_accedeme_helpers
     
     public function accedemeIsTableExist() {
         global $wpdb;
-        $table_name  = $wpdb->prefix . 'accedeme';
+        $table_name  = $wpdb->prefix . ACCEDEME_TABLE_NAME;
+		
         $table_exist = false;
         if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) == $table_name ) {
             $table_exist = true;
@@ -57,23 +58,25 @@ class wp_accedeme_helpers
         return $table_exist;
     }
 
-    public function accedemeInsert( $data )
+    public function accedemeInsert( $website_key )
     {
         global $wpdb;
+        $table_name  = $wpdb->prefix . ACCEDEME_TABLE_NAME;
 
-        $table_name  = $wpdb->prefix . 'accedeme';
-
+		$data = array(
+						'domain_key' => $website_key,
+		);
         $wpdb->insert( $table_name, $data );
     }
     
     public function accedemeGetRemoteWebsiteKey() {
         global $wp_version;
 
-        $website = array();
+        $website_key = null;
 
         $apiUrl = 'https://accedeme.com/plugins/wordpress_get_domain_key';
         $apiParameters = array(
-            'domain' => $_SERVER['HTTP_HOST'],
+            'domain' => parse_url( get_site_url(), PHP_URL_HOST ),
             'version' => $wp_version,
         );
     
@@ -81,7 +84,7 @@ class wp_accedeme_helpers
             'headers' => array(
                 'Content-Type' => 'application/json',
             ),
-            'body'        => json_encode($apiParameters),
+            'body'        => wp_json_encode($apiParameters),
             'method'      => 'POST',
 			'timeout'     => 15,
 			'sslverify'   => false,
@@ -95,28 +98,25 @@ class wp_accedeme_helpers
     
             if ( $response_body['status'] == 'ok' ) 
             {
-                $website = [
-                    'domain_key' => $response_body['data']['domain_key'],
-                ];
+                $website_key = sanitize_text_field( $response_body['data']['domain_key'] );
             }
         }
     
-        return $website;
+        return $website_key;
     }
     
-    public function accedemeGetWebsite() {
+    public function accedemeGetWebsiteKey() {
         global $wpdb;
-    
-        $table_name = $wpdb->prefix . 'accedeme';
-        $website    = null;
-        $dbData     = $wpdb->get_results( "SELECT * FROM $table_name LIMIT 0, 1" );
-    
-        if ( isset( $dbData[0] ) ) {
-            $website = [
-                'domain_key' => $dbData[0]->domain_key,
-            ];
-        }
-    
-        return $website;
+        $table_name = $wpdb->prefix . ACCEDEME_TABLE_NAME;
+
+
+        $website_key = $wpdb->get_var( $wpdb->prepare( " SELECT domain_key FROM $table_name WHERE id = %d ", 1 ) );
+
+		if ( !$website_key )
+		{
+			$website_key = $this->accedemeGetRemoteWebsiteKey();
+		}
+				
+        return $website_key;
     }
 }

@@ -22,9 +22,9 @@ class wp_accedeme_admin
 
     function accedeme_options_menu_script(){
         
-        if(!current_user_can('manage_options') ){
+        if ( !current_user_can('manage_options') ){
                 
-            wp_die( __('You do not have sufficient permissions to access this page.','accedeme-plugin') );
+            wp_die( __('No tiene suficientes permisos para acceder a esta página.','wp-accedeme') );
             
         }	
         if( !defined( 'ABSPATH' ) ) exit;
@@ -37,36 +37,35 @@ class wp_accedeme_admin
         require_once ACCEDEME_DIR . 'includes/wp-accedeme-helpers.php';
         $helpers = new wp_accedeme_helpers();
 
-        $data = $helpers->accedemeGetRemoteWebsiteKey();
+		$website_key = $helpers->accedemeGetWebsiteKey();
     
         wp_enqueue_style( $handle, $src );
         ?>
         <div class="wrap">
     
-            <h2><?php _e('WP Accedeme &raquo; Settings','accedeme-plugin'); ?></h2>
+            <h2><?php _e('WP Accedeme &raquo; Settings','wp-accedeme'); ?></h2>
             
             <div class="container-accede">
-                <a id="logo-accedeme" href="https://accedeme.com/login" target="_blank">
-                    <img src="<?php echo $imageUrl; ?>" alt="Accedeme">
+                <a id="logo-accedeme" href="<?php echo esc_attr( 'https://accedeme.com/login' ); ?>" target="_blank">
+                    <img src="<?php echo esc_url( $imageUrl ); ?>" alt="Accedeme logo">
                 </a>
                 <?php 
-                    if ( !empty($data['domain_key']) ) 
+                    if ( $website_key ) 
                     {
-                        echo '<a id="btn_panel" href="https://accedeme.com/control_panel/dashboard" target="_blank">
+                        echo '<a id="btn_panel" href="'.esc_attr( 'https://accedeme.com/login' ).'" target="_blank">
                             <div>';
-                        _e('Panel de control','accedeme-plugin');
+                        _e('Panel de control','wp-accedeme');
                         echo '</div>
                         </a>';
                     }  
                     else 
                     {
                         echo '<div id="reg_text">';
-                        _e('Ya sólo queda registrar tu dominio en accedeme.com', 'accedeme-plugin');
+                        _e('Ya sólo queda registrar tu dominio en accedeme.com', 'wp-accedeme');
                         echo '</div>';
-    
-                        echo '<a id="btn_register" href="https://accedeme.com/register" target="_blank">
+                        echo '<a id="btn_register" href="'.esc_attr( 'https://accedeme.com/register' ).'" target="_blank">
                         <div>';
-                        _e('Registra tu dominio ahora','accedeme-plugin');
+                        _e('Registra tu dominio ahora','wp-accedeme');
                         echo '</div>
                         </a>';
                     }
