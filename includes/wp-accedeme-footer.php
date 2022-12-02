@@ -22,6 +22,6 @@ class wp_accedeme_footer
      * Adds the line.
      */
     function frontendFooterScript(){
-        _e(html_entity_decode(wp_unslash('<script id="accessme" src="https://cdn.access-me.software/accssme/accssmetool.js"></script>'.PHP_EOL)));
+        _e(html_entity_decode(wp_unslash('<script id="accssmm" src="https://widget.accssm.com/accssme/accssmetool.js"></script>'.PHP_EOL)));
     }
 }
