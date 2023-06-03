@@ -5,7 +5,7 @@ Text Domain: wp-accedeme
 Domain Path: /languages
 Plugin URI: https://accedeme.com/plataforma-framework/wordpress
 Description: Añade a tu sitio WordPress una capa de accesibilidad. Permite que cualquiera pueda acceder a tu página web independientemente de sus capacidades, conocimientos y del dispositivo usado.
-Version: 0.2
+Version: 0.3
 Author: Accedeme
 Author URI: https://accedeme.com/
 License: GPLv2 or later

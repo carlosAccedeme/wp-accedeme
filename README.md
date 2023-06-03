@@ -1,5 +1,5 @@
 # wp-accedeme
-WordPress plugin for Accedeme widget
+WordPress plugin for AccedeMe Widget
 
 ### Accesibilidad Web con Accedeme - Plugin WordPress
 
@@ -9,22 +9,33 @@ WordPress plugin for Accedeme widget
 - Plugin URL: http://accedeme.com/plugins/wordpress/wp-accedeme.zip
 - Tags: accedeme, accesibilidad, a11y, WCAG, Section 508, accesibilidad web, discapacitado, invidente, ciego, manco, widget accesibilidad, plugin accesibilidad, contraste, tamaño texto, cursor, navegar con el teclado, saturacion del color, fuentes legibles
 - Requires at least: 4.7
-- Tested up to: 6.0
+- Tested up to: 6.2
 - Stable tag: 0.2
 - Requires at least PHP: 7.0
 - License: GPLv3 or later.
 - License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Descripción
-### Asequible, Automático, Fácil - Haz tu web accesible ya
+### Asequible, Automático, Fácil - Haz tu web más accesible ya
 
-accedeMe es un servicio que usa la Inteligencia Artificial para hacer tu web asscesible. Nuestro plugin gratuito para WordPress convierte en muy fácil la integración y configuración. accedeMe ayudará al 20% de tus visitas que necesitán de una ayuda para acceder al contenido de tu web facilmente. Desarrollado para ofrecer los mejores resultados tanto para pymes como para grandes empresas, webs del sector público o relacionadas.
+El widget de AccedeMe es un plugin que usa la Inteligencia Artificial y el Machine Learning para hacer tu web más accesible.
 
-Con este plugin de AccedeMe para WordPress conseguirás conectas con los servicios de accedeMe sin tener que tocar ningún código.
+Tus visitantes tienen más de 30 ajustes y también los perfiles más comunes. Sus selecciones pueden persistir entre navegadores y ordenadores alrededor del mundo.
 
-Nuestra herramienta potenciará la percepción de tu marca y abrirá tu webs a nuevos potenciales clientes al hacerla más accesible.
+Nuestro plugin gratuito para WordPress es muy fácil de integrar y configurar.
 
-Prueba la herramienta lider en accesibilidad ahora, dispones de un periodo de prueba de 7 dias, sin necesidad de tarjeta de crédito ni pagos previos.
+AccedeMe ayudará a tus visitantes que necesitan de una ayuda para acceder al contenido de tu web facilmente.
+
+Desarrollado para ofrecer los mejores resultados tanto para pymes como para grandes empresas, webs del sector público o relacionadas.
+
+Nuestro Widget potenciará la percepción de tu marca y abrirá tu webs a nuevos potenciales clientes al hacerla más accesible.
+
+Prueba el Widget lider en accesibilidad ahora, dispones de un periodo de prueba de 7 dias, sin necesidad de tarjeta de crédito ni pagos previos.
+
+Con este plugin de AccedeMe para WordPress conseguirás conectar con los servicios de AccedeMe sin tener que tocar ningún código.
+
+Primero debes dar de alta tu dominio en nuestra plataforma ( [https://accedeme.com/widget-register](https://accedeme.com/widget-register) ) 
+
 
 ¡¡Visita [https://accedeme.com](https://accedeme.com) para ver mucho más!!
 
@@ -32,30 +43,11 @@ Prueba la herramienta lider en accesibilidad ahora, dispones de un periodo de pr
 
 Todas los sitios web necesitan estar registrados en nuestra plataforma.
 
-Regístra tu dominio en sólo cinco pasos en [https://accedeme.com/register](https://accedeme.com/register) para activar nuestro widget.
-
-
-### Affordable, Automatic, Easy - Make your website accessible now
-
-accessMe is a service that uses Artificial Intelligence to make your website accessible. Our free WordPress plugin makes integration and setup a breeze. accessMe will help 20% of your visitors who need help to access the content of your website easily. Developed to offer the best results for both SMEs and large companies, public sector or related websites.
-
-With this free AccessMe plugin for WordPress you will be able to connect with accessMe services without having to touch any code.
-
-Our tool will enhance the perception of your brand and open your website to new potential customers by making it more accessible.
-
-Try the leading tool in accessibility now, you have a trial period of 7 days, without the need for a credit card.
-
-Visit [https://accedeme.com](https://accedeme.com) to see much more!!
-
-### How do I register?
-
-All websites need to be registered on our platform.
-
-Register your domain in just five steps at [https://accedeme.com/register](https://accedeme.com/register) to activate our widget.
+Regístra tu dominio en sólo cinco pasos en [https://accedeme.com/widget-register](https://accedeme.com/widget-register) antes de activar este plugin.
 
 ## Instalación
 
-La forma más fácil de instalar este plugin es a través del punto del menu de la izquierda de plugins de WordPress.
+La forma más fácil de instalar este plugin es a través del punto del menu del panel de administración de tu WordPress.
 
 Como instalarlo de forma manual:
 
@@ -65,7 +57,39 @@ Como instalarlo de forma manual:
 
 Y ya está.
 
-The easiest way to install this plugin is via the WordPress Plugins menu item on the left.
+
+### Affordable, Automatic, Easy - Make your website more accessible now
+
+The AccedeMe widget is a plugin that uses Artificial Intelligence and Machine Learning to make your website more accessible.
+
+More than 30 adjustments are available and also common profiles. Selections can persist through browsers and computers across the world.
+
+Our free WordPress plugin is very easy to integrate and configure.
+
+AccedeMe will help your visitors who need help to access the content of your website easily.
+
+Developed to offer the best results for both SMEs and large companies, public sector or related websites.
+
+Our Widget will enhance the perception of your brand and open your website to new potential customers by making it more accessible.
+
+Try the leading accessibility Widget now, you have a 7-day trial period, without the need for a credit card or prior payments.
+
+With this AccedeMe plugin for WordPress you will be able to connect with the AccedeMe services without having to touch any code.
+
+First you must register your domain on our platform ([https://accedeme.com/widget-register](https://accedeme.com/widget-register))
+
+
+Visit [https://accedeme.com](https://accedeme.com) to see much more!!
+
+### How do I register?
+
+All websites need to be registered on our platform.
+
+Register your domain in just five steps at [https://accedeme.com/widget-register](https://accedeme.com/widget-register) before activating this plugin.
+
+## Installation
+
+The easiest way to install this plugin is via the WordPress Administrator Plugins menu item on the left.
 
 How to install it manually:
 
@@ -76,6 +100,10 @@ How to install it manually:
 And that's it.
 
 ## Changelog
+= 0.3 =
+* Añadidos detalles de seguridad - Added security updates
+= 0.2 =
+* Añadido Auto-update - Added Auto-update
 = 0.1 =
 * Primera versión - First versión
 
@@ -83,15 +111,19 @@ And that's it.
 ## Upgrade Notice
 ### 0.1 
 - Versión inicial - Initial version.
+### 0.2 
+- Mejoras varias - Several upgrades.
+### 0.3 
+- Mejoras varias - Several upgrades.
 
 ## Frequently Asked Questions
 
 1. ¿Funciona con todas las páginas web?
-   - Si, funciona en todas las páginas web que estén registradas en nuestra plataforma, aquí puedes registrate en sólo 5 pasos: [https://accedeme.com/register](registrarte).
+   - Si, funciona en todas las páginas web, creadas con cualquier CMS. Es imprescindible que estén registradas en nuestra plataforma, aquí puedes registrate en sólo 5 pasos: [https://accedeme.com/widget-register](registrarte).
 2. ¿Funciona en todos los navegadores?
    - Si, no importa el sistema operativo que uses, ni el navegador. Siempre decimos, si un navegador entiende como mostrar una página web, AccedeMe también.
 3. ¿Tengo que preparar mi página web para integrarlo?
-   - No, nuestro escaner se encargará de analizar tú página web y lo dispondrá todo sin que te enteres.
+   - No, nuestro escaner se encargará de analizar tú página web cuando se carga en un navegador y lo dispondrá todo sin que te enteres ni afecte al diseño.
 4. ¿Afecta a la carga de la página?
    - No, nos esperamos hasta 5 segundos después de la finalización de la carga de la página para no ser detectados como parte de la carga de la página. No afectaremos a tu SEO.
 5.  ¿Qué hago si tengo más dudas?
