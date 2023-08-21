@@ -4,8 +4,8 @@ Author URI: http://accedeme.com
 Plugin URL: http://accedeme.com/plugins/wordpress/wp-accedeme.zip
 Tags: accedeme, accesibilidad, a11y, WCAG, Section 508, accesibilidad web, discapacitado, invidente, ciego, manco, widget accesibilidad, plugin accesibilidad, contraste, tamaño texto, cursor, navegar con el teclado, saturacion del color, fuentes legibles
 Requires at least: 4.7
-Tested up to: 6.2
-Stable tag: 0.3
+Tested up to: 6.3
+Stable tag: 0.4
 Requires PHP: 7.0
 License: GPLv3 or later.
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -15,7 +15,7 @@ en: Add to your WordPress more accessibility. Let everybody access your website 
 
 == Description ==
 Español:
-***** Asequible, Automático, Fácil - Haz tu web accesible *****
+***** Asequible, Automático, Fácil - Haz tu web más accesible *****
 
 El widget de AccedeMe es un plugin que usa la Inteligencia Artificial y el Machine Learning para hacer tu web más accesible.
 
@@ -39,7 +39,7 @@ Primero debes dar de alta tu dominio en nuestra plataforma ( [https://accedeme.c
 
 ### ¿Como me registro?
 
-Todas los sitios web necesitan estar registrados en nuestra plataforma.
+Todos los sitios web necesitan estar registrados en nuestra plataforma.
 
 Regístra tu dominio en sólo cinco pasos en [https://accedeme.com/widget-register](https://accedeme.com/widget-register) antes de activar este plugin.
 
@@ -54,6 +54,13 @@ Como instalarlo de forma manual:
 1. Activarlo a través del menu 'Plugins' en WordPress
 
 Y ya está.
+
+## Acerca de Accedeme
+
+Nuestro Widget de Accesibilidad Web necesita conectarse con nuestros servidores (access-me.software, accssmm.com, ...) para recoger y sincronizar los datos y servicios
+involucrados en la experiencia de usuario de nuestro Widget. Con ello podemos asegurar que siempre dispondrá de la última tecnología que hallamos desarrollado. Puede leer
+nuestros textos legales en nuestra página web.
+
 
 English:
 ### Affordable, Automatic, Easy - Make your website more accessible now
@@ -97,7 +104,15 @@ How to install it manually:
 
 And that's it.
 
+## About Access me
+
+Our Web Accessibility Widget needs to connect with our servers (access-me.software, accssmm.com, ...) to collect and synchronize data and services
+involved in the user experience offered by the Widget. With this we can ensure that you will always have the latest technology that we have developed. Can read
+our legal texts on our website.
+
 == Changelog ==
+= 0.4 =
+* Nueva infraestructura de servidores - New servers infraestructure
 = 0.3 =
 * Añadidos detalles de seguridad - Added security updates
 = 0.2 =
@@ -107,8 +122,8 @@ And that's it.
 
 
 == Upgrade Notice ==
-= 0.3 =
-Te puedes olvidar de añadir las nuevas funcionalidades, el plugin lo hace por tí. - You can forget about adding the new features, the plugin does it for you.
+= 0.4 =
+El éxito de nuestro Widget ahora soportadp por una nueva infraestructura de servidores. - The success of our Widget now supported by a new server infrastructure.
 
 == Frequently Asked Questions ==
 

@@ -10,7 +10,7 @@ WordPress plugin for AccedeMe Widget
 - Tags: accedeme, accesibilidad, a11y, WCAG, Section 508, accesibilidad web, discapacitado, invidente, ciego, manco, widget accesibilidad, plugin accesibilidad, contraste, tamaño texto, cursor, navegar con el teclado, saturacion del color, fuentes legibles
 - Requires at least: 4.7
 - Tested up to: 6.2
-- Stable tag: 0.2
+- Stable tag: 0.4
 - Requires at least PHP: 7.0
 - License: GPLv3 or later.
 - License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -100,6 +100,8 @@ How to install it manually:
 And that's it.
 
 ## Changelog
+= 0.4 =
+* Nueva infraestructura de servidores - New servers infraestructure
 = 0.3 =
 * Añadidos detalles de seguridad - Added security updates
 = 0.2 =
@@ -114,6 +116,8 @@ And that's it.
 ### 0.2 
 - Mejoras varias - Several upgrades.
 ### 0.3 
+- Mejoras varias - Several upgrades.
+### 0.4 
 - Mejoras varias - Several upgrades.
 
 ## Frequently Asked Questions

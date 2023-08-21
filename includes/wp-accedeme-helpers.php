@@ -77,6 +77,7 @@ class wp_accedeme_helpers
         $apiUrl = 'https://accedeme.com/plugins/wordpress_get_domain_key';
         $apiParameters = array(
             'domain' => parse_url( get_site_url(), PHP_URL_HOST ),
+            'name' => get_bloginfo( 'name' ),
             'version' => $wp_version,
         );
     
@@ -84,7 +85,7 @@ class wp_accedeme_helpers
             'headers' => array(
                 'Content-Type' => 'application/json',
             ),
-            'body'        => wp_json_encode($apiParameters),
+            'body'        => wp_json_encode( $apiParameters ),
             'method'      => 'POST',
 			'timeout'     => 15,
 			'sslverify'   => false,
@@ -96,7 +97,7 @@ class wp_accedeme_helpers
         if ( $response_code === 'OK' ) {
             $response_body = json_decode( wp_remote_retrieve_body( $response ), true );
     
-            if ( $response_body['status'] == 'ok' ) 
+            if ( $response_body['status'] == 'OK' )
             {
                 $website_key = sanitize_text_field( $response_body['data']['domain_key'] );
             }

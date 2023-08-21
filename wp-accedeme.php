@@ -4,9 +4,9 @@ Plugin Name: Accedeme for WP
 Text Domain: wp-accedeme
 Domain Path: /languages
 Plugin URI: https://accedeme.com/plataforma-framework/wordpress
-Description: Añade a tu sitio WordPress una capa de accesibilidad. Permite que cualquiera pueda acceder a tu página web independientemente de sus capacidades, conocimientos y del dispositivo usado.
-Version: 0.3
-Author: Accedeme
+Description: Añade a tu sitio WordPress el Widget de Accesibilidad de AccedeMe. Permite que cualquiera pueda acceder a tu página web independientemente de sus capacidades, conocimientos y del dispositivo usado.
+Version: 0.4
+Author: AccedeMe
 Author URI: https://accedeme.com/
 License: GPLv2 or later
 Text Domain: accedeme
