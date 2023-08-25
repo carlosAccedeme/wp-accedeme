@@ -57,9 +57,9 @@ Y ya está.
 
 ## Acerca de Accedeme
 
-Nuestro Widget de Accesibilidad Web necesita conectarse con nuestros servidores (access-me.software, accssmm.com, ...) para recoger y sincronizar los datos y servicios
-involucrados en la experiencia de usuario de nuestro Widget. Con ello podemos asegurar que siempre dispondrá de la última tecnología que hallamos desarrollado. Puede leer
-nuestros textos legales en nuestra página web.
+Nuestro Widget de Accesibilidad Web necesita conectarse con nuestros servidores (access-me.software, accssmm.com, ...) y de terceros (responsivevoice.org)
+para recoger y sincronizar los datos y servicios involucrados en la experiencia de usuario de nuestro Widget. Con ello podemos asegurar que siempre dispondrá
+de la última tecnología que hallamos desarrollado. Puede leer nuestros textos legales en nuestra página web.
 
 
 English:
@@ -106,9 +106,9 @@ And that's it.
 
 ## About Access me
 
-Our Web Accessibility Widget needs to connect with our servers (access-me.software, accssmm.com, ...) to collect and synchronize data and services
-involved in the user experience offered by the Widget. With this we can ensure that you will always have the latest technology that we have developed. Can read
-our legal texts on our website.
+Our Web Accessibility Widget needs to connect with our servers (access-me.software, accssmm.com, ...)and third parties (responsivevoice.org)
+to collect and synchronize data and services involved in the user experience offered by the Widget. With this we can ensure that you will always
+have the latest technology that we have developed. Can read our legal texts on our website.
 
 == Changelog ==
 = 0.4 =
